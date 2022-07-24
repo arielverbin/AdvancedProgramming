@@ -1,3 +1,6 @@
+#ifndef ADVANCEDPROGRAMMING_POINT_H
+#define ADVANCEDPROGRAMMING_POINT_H
+
 //A four-dimensional point.
 class Point {
     private:
@@ -24,3 +27,4 @@ class Point {
      **/
     double getX4();
 };
+#endif //ADVANCEDPROGRAMMING_POINT_H
