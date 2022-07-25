@@ -3,6 +3,10 @@
 Point::Point(double y1, double y2, double y3, double y4) :
         x1(y1), x2(y2), x3(y3), x4(y4) {}
 
+Point::Point():
+     x1(0), x2(0), x3(0), x4(0) {}
+
+
 double Point::getX1() const {
     return x1;
 }
