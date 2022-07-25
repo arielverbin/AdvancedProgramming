@@ -10,8 +10,8 @@ class Point {
         double x4;
     public:
     Point(double x1, double x2, double x3, double x4);
-    
-    Point::Point();
+
+    Point();
     /**
      * @return the first value of the point.
      **/

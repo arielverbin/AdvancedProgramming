@@ -2,6 +2,7 @@
 //constructor - from point and string
 Flower::Flower(Point const point1, std::string type) {
     this->point = point1;
+    this->type = type;
 }
 
 /**
