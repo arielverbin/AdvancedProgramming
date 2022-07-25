@@ -4,27 +4,28 @@
 //A four-dimensional point.
 class Point {
     private:
-        const double x1;
-        const double x2;
-        const double x3;
-        const double x4;
+        double x1;
+        double x2;
+        double x3;
+        double x4;
     public:
     Point(double x1, double x2, double x3, double x4);
     /**
      * @return the first value of the point.
      **/
-    double getX1();
+    double getX1() const;
     /**
      * @return the second value of the point.
      **/
-    double getX2();
+    double getX2() const;
     /**
      * @return the third value of the point.
      **/
-    double getX3();
+    double getX3() const;
     /**
      * @return the forth value of the point.
      **/
-    double getX4();
+    double getX4() const;
+    Point& operator=(const Point& other);
 };
 #endif //ADVANCEDPROGRAMMING_POINT_H

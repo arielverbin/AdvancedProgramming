@@ -1,6 +1,4 @@
-//
-// Created by Ariel Verbin on 24/07/2022.
-//
+
 #include <cmath>
 #include "EuclideanDistance.h"
 

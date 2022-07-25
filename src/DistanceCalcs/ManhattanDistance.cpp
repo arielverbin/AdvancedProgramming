@@ -1,6 +1,3 @@
-//
-// Created by Ariel Verbin on 25/07/2022.
-//
 
 #include "ManhattanDistance.h"
 #include <cmath>
