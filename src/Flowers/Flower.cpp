@@ -1,16 +1,16 @@
 #include "Flower.h"
+#include <utility>
+
 //constructor - from point and string
-Flower::Flower(Point const point1, std::string type) {
-    this->point = point1;
-    this->type = type;
-}
+Flower::Flower(Point point1, std::string name) :
+                    point(point1), type(std::move(name)) { }
 
 /**
  * @brief get the flower's point
  * 
  * @return Point 
  */
-Point Flower::getPoint(){
+Point& Flower::getPoint(){
     return point;
 }
 /**
@@ -18,6 +18,6 @@ Point Flower::getPoint(){
  * 
  * @return std::string 
  */
-std::string Flower::getType(){
+std::string& Flower::getType(){
     return type;
 }

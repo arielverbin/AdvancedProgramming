@@ -4,7 +4,8 @@
 #include "DistanceCalcs/EuclideanDistance.h"
 #include "DistanceCalcs/ManhattanDistance.h"
 #include "DistanceCalcs/ChebyshevDistance.h"
-
+#include "Flowers/Flower.h"
+#include <string>
 void printDistance(DistanceCalculator *dc, Point p1, Point p2);
 /**
  * tests.
@@ -17,6 +18,9 @@ int main(){
     std::cout << p2.getX1() << p2.getX2() <<std::endl;
     DistanceCalculator* dc = new ChebyshevDistance();
     printDistance(dc, p1, p2);
+    Flower f = Flower(p1, "iris");
+    std::cout << f.getPoint().getX1() << std::endl;
+    std::cout << f.getType() << std::endl;
 
     return 0;
 }

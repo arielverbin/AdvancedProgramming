@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string> // for string class
-#include"Point.h"
+#include"../Point.h"
 
 //A Flower - a Point + type
 class Flower {
@@ -16,12 +16,12 @@ class Flower {
      * 
      * @return Point 
      */
-    Point getPoint();
+    Point& getPoint();
 
     /**
      * @brief 
      * @return std::string
      */
-    std::string getType();
+    std::string& getType();
 
 };
