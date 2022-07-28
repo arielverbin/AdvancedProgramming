@@ -5,67 +5,72 @@
 #include "DistanceCalcs/ManhattanDistance.h"
 #include "DistanceCalcs/EuclideanDistance.h"
 #include "DistanceCalcs/ChebyshevDistance.h"
-#include <string>
 #include <fstream>
+#include<list>
 
 using namespace std;
 /**
- * @param fileName file name.
- * @param length pointer to am int.
- * @return a pointer to an array of flowers according to the given data in the file. It also returns the length
- *          of the array via "length" pointer.
+ * Converts a list to an array.
+ * @param l the list.
+ * @return  the new array.
  */
-Flower **getDataFromFile(const std::string &fileName, int *length) {
-    stack<Flower*> stack;
-    ifstream input;
-    input.open(fileName);
-    if (input.fail()) {
-        cout << "Could not open " << fileName << endl;
-        exit(1);
+void** listToArray(const list<void*>& l) {
+    void** newArr = new void*[l.size()];
+    int i = 0;
+    for(void* v : l) {
+        newArr[i++] = v;
     }
-    string line;
-    while (!input.eof()) {
-        getline(input, line);
-        if(std::equal(line.begin(), line.end(), "")) continue; // avoid an empty line.
-        stack.push(new Flower(line, 4));
-    }
-    input.close();
-    auto** flowers = new Flower *[stack.size()];
-    *length = (int)stack.size();
-    for(int i = *length - 1; i >= 0; i --) {
-        flowers[i] = stack.top();
-        stack.pop();
-    }
-    return flowers;
+    return newArr;
 }
 /**
- * @param fileName file name.
- * @param length pointer to am int.
- * @return a pointer to an array of points according to the given data in the file. It also returns the length
- *          of the array via "length" pointer.
+ * opens a file.
+ * @param fileName the path.
+ * @return the ifstream.
  */
-Point** getPointsFromFile(const std::string fileName, int *length){
-    stack<Point*> stack;
+ifstream openFile(const std::string& fileName) {
     ifstream input;
     input.open(fileName);
     if (input.fail()) {
         cout << "Could not open " << fileName << endl;
         exit(1);
     }
+    return input;
+}
+/**
+ * Creates a new array with the flowers from the given file.
+ * @param fileName the given file.
+ * @param length pointer to int, used to store the number of flowers in the file.
+ * @return the array.
+ */
+Flower** getDataFromFile(const std::string &fileName, int *length) {
+    list<void *> l;
     string line;
+    ifstream input = openFile(fileName);
     while (!input.eof()) {
         getline(input, line);
         if(std::equal(line.begin(), line.end(), "")) continue; // avoid an empty line.
-        stack.push(new Point(line,4));
+        l.push_back(new Flower(line, 4));
     }
-    input.close();
-    auto** points = new Point *[stack.size()];
-    *length = (int)stack.size();
-    for(int i = *length - 1; i >= 0; i --) {
-        points[i] = stack.top();
-        stack.pop();
+    *length = (int)l.size();
+    return (Flower**)listToArray(l);
+}
+/**
+ * Creates a new array with the points (unclassified flowers) from the given file.
+ * @param fileName the given file.
+ * @param length pointer to int, used to store the number of points in the file.
+ * @return the array.
+ */
+Point** getPointsFromFile(const std::string& fileName, int *length){
+    list<void *> l;
+    string line;
+    ifstream input = openFile(fileName);
+    while (!input.eof()) {
+        getline(input, line);
+        if(std::equal(line.begin(), line.end(), "")) continue; // avoid an empty line.
+        l.push_back(new Point(line,4));
     }
-    return points;
+    *length = (int)l.size();
+    return (Point**)listToArray(l);
 }
 /**
  * Copy the classified points to a given file.
@@ -73,7 +78,7 @@ Point** getPointsFromFile(const std::string fileName, int *length){
  * @param flowers the classified points (as flowers)
  * @param length the length of the flowers array.
  */
-void copyToFile(const std::string fileName, Flower** flowers, int length) {
+void copyToFile(const std::string& fileName, Flower** flowers, int length) {
     ofstream output;
     output.open (fileName);
     for(int i = 0; i < length; i ++) {
@@ -81,25 +86,56 @@ void copyToFile(const std::string fileName, Flower** flowers, int length) {
     }
     output.close();
 }
-
 /**
- * tests.
- * @return 0;
+ * classify all of the points according to the given classifier, distance calculator, and k.
+ * @param dc the distance calculator.
+ * @param knn the classifier.
+ * @param unclassifiedPoints the points to be classified.
+ * @param lengthOfPoints the number of points to be classified.
+ * @param k the constant k from the algorithm.
+ * @return new array of classified points (as flowers).
  */
-int main() {
-    int k = 11;
-    int lengthOfData, lengthOfPoints; //length of classified flowers, length of unclassified points.
-    Flower **flowers = getDataFromFile("classified.csv", &lengthOfData); //fill "flowers" with classifieds.
-    KNNClassifier knnClassifier = KNNClassifier(flowers, lengthOfData); //new KNNClassifier.
-    Point **unclassifiedPoints = getPointsFromFile("unclassified.csv", &lengthOfPoints);
-
+Flower** classifyAll(DistanceCalculator *dc, KNNClassifier knn,
+                     Point** unclassifiedPoints, int lengthOfPoints, int k) {
     auto** classifiedPoints = new Flower*[lengthOfPoints]; //to be filled with the classified points.
-
     for(int i = 0; i < lengthOfPoints; i ++) {
         Point curPoint = *unclassifiedPoints[i]; //take the current point.
         classifiedPoints[i] = new Flower(curPoint, //classify it and create a new flower.
-                                         knnClassifier.classify(curPoint,k, *new ChebyshevDistance()));
+                                         knn.classify(curPoint,k, *dc));
     }
+    return classifiedPoints;
+}
+
+/**
+ * ?!?!#??
+ */
+int main() {
+    int k = 11;
+    //length of classified flowers, length of unclassified points.
+    int lengthOfData, lengthOfPoints;
+
+    Flower **flowers = getDataFromFile("classified.csv", &lengthOfData); //fill "flowers" with classifieds.
+    Point **unclassifiedPoints = getPointsFromFile("unclassified.csv", &lengthOfPoints);
+
+    KNNClassifier knnClassifier = KNNClassifier(flowers, lengthOfData); //new KNNClassifier.
+
+//EuclideanDistance
+
+    auto** classifiedPoints = classifyAll(new EuclideanDistance(),
+                                          knnClassifier, unclassifiedPoints, lengthOfPoints, k);
     copyToFile("euclidean_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file.
+
+//ManhattanDistance
+
+    classifiedPoints = classifyAll(new ManhattanDistance(),
+                                          knnClassifier, unclassifiedPoints, lengthOfPoints, k);
+    copyToFile("manhattan_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file
+
+//ChebyshevDistance
+
+    classifiedPoints = classifyAll(new ChebyshevDistance(),
+                                   knnClassifier, unclassifiedPoints, lengthOfPoints, k);
+    copyToFile("chebyshev_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file.
+
 }
 
