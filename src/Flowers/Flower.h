@@ -1,3 +1,6 @@
+#ifndef ADVANCEDPROGRAMMING_FLOWER_H
+#define ADVANCEDPROGRAMMING_FLOWER_H
+
 #include <iostream>
 #include <string> // for string class
 #include"../Point.h"
@@ -37,3 +40,4 @@ class Flower {
     friend std::ostream& operator<<(std::ostream& os, Flower& a);
 
 };
+#endif //ADVANCEDPROGRAMMING_FLOWER_H

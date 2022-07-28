@@ -1,7 +1,21 @@
 #include "Point.h"
 
 Point::Point(double* data, int length) : data(data), length(length){
-
+}
+Point::Point(std::string str, int numOfValues) : data(nullptr){
+    auto* values = new double[numOfValues];
+    int start = 0;
+    int end = (int)str.find(',');
+    int i = 0;
+    while (end != -1) {
+        values[i]=std::stod(str.substr(start, end - start));
+        i++;
+        start = end + 1;
+        end = (int)str.find(',', start);
+    }
+    values[i] = std::stod(str.substr(start, end - start));
+    data = values;
+    length = numOfValues;
 }
 double Point::get(int i) const {
     return data[i];

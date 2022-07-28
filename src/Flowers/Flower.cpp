@@ -2,7 +2,6 @@
 #include <utility>
 #include <iostream>
 #include <string>
-#include <fstream>
 
 //constructor - from point and string
 Flower::Flower(Point point1, std::string name) :
@@ -19,7 +18,7 @@ Flower::Flower(const std::string &str, int numOfValues) : point(nullptr, 0){
         start = end + 1;
         end = (int)str.find(',', start);
     }
-    point = Point(values, 4);
+    point = Point(values, numOfValues);
     type =str.substr(start, end - start);
 }
 
