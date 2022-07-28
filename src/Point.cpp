@@ -2,7 +2,7 @@
 
 Point::Point(double* data, int length) : data(data), length(length){
 }
-Point::Point(std::string str, int numOfValues) : data(nullptr){
+Point::Point(const std::string& str, int numOfValues) : data(nullptr){
     auto* values = new double[numOfValues];
     int start = 0;
     int end = (int)str.find(',');

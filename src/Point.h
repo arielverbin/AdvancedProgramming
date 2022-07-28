@@ -16,7 +16,7 @@ class Point {
      */
     Point(double *data, int length);
 
-    Point(std::string str, int numOfValues);
+    Point(const std::string& str, int numOfValues);
 
     /**
      * @param i, the index of the value.
