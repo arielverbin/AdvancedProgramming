@@ -1,22 +1,45 @@
 #include <iostream>
 #include "Point.h"
-#include "DistanceCalcs/DistanceCalculator.h"
-#include "DistanceCalcs/EuclideanDistance.h"
-#include "DistanceCalcs/ManhattanDistance.h"
-#include "DistanceCalcs/ChebyshevDistance.h"
 #include "Flowers/Flower.h"
 #include <string>
-void printDistance(DistanceCalculator *dc, Point p1, Point p2);
+#include <fstream>
+
+using namespace std;
+
+Flower **getDataFromFile(const std::string &fileName, int *length) {
+    stack<Flower> stack;
+    ifstream input;
+    input.open(fileName);
+    if (input.fail()) {
+        cout << "Could not open " << fileName << endl;
+        exit(1);
+    }
+    string line;
+    while (!input.eof()) {
+        getline(input, line);
+        if(std::equal(line.begin(), line.end(), "")) continue; // avoid an empty line.
+        stack.push(Flower(line, 4));
+    }
+    input.close();
+    auto** flowers = new Flower *[stack.size()];
+    int i = (int)stack.size() - 1;
+    *length = (int)stack.size();
+    while(!stack.empty()) {
+        flowers[i] = &stack.top();
+        i--;
+        stack.pop();
+    }
+    return flowers;
+}
+
 /**
  * tests.
  * @return 0;
  */
-int main(){
+int main() {
+    int length;
+    Flower **flowers = getDataFromFile("classified.csv", &length);
 
-    printDistance(new EuclideanDistance(), p,p2);
-    return 0;
+
 }
-//test for the distance methods.
-void printDistance(DistanceCalculator* dc, Point p1, Point p2) {
-    std::cout << dc->calculate(p1,p2) << std::endl;
-}
+

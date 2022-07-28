@@ -4,13 +4,23 @@
 
 //A Flower - a Point + type
 class Flower {
-    private:
-        //the flower's data
+//the flower's data
         Point point;
         //the flower's type
         std::string type;
     public:
+    /**
+     * Constructor
+     * @param point set of values.
+     * @param type of the flower.
+     */
     Flower(Point point, std::string type);
+    /**
+     * Constructor using a string representation.
+     * @param str in form : "value,value,value,...,value,type".
+     * @param numOfValues the number of values for the point.
+     */
+    Flower(const std::string &str, int numOfValues);
     /**
      * @brief Get the Point object
      * 
@@ -23,5 +33,7 @@ class Flower {
      * @return std::string
      */
     std::string& getType();
+
+    friend std::ostream& operator<<(std::ostream& os, Flower& a);
 
 };
