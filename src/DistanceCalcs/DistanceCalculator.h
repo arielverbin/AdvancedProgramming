@@ -10,9 +10,6 @@
 class DistanceCalculator {
 public:
     virtual double calculate(Point p1, Point p2) = 0;
-    Point* findKNearest(Point p, Point* data, int dataLength, int k);
-private:
-    void partition(double* lengths, int k);
 };
 
 

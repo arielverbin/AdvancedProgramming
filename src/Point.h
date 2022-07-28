@@ -1,33 +1,38 @@
 #ifndef ADVANCEDPROGRAMMING_POINT_H
 #define ADVANCEDPROGRAMMING_POINT_H
 
+#include <iostream>
+
 //A four-dimensional point.
 class Point {
     private:
-        double x1;
-        double x2;
-        double x3;
-        double x4;
+        double* data;
+        int length;
     public:
-    Point(double x1, double x2, double x3, double x4);
+    /**
+     * Constructor.
+     * @param data a dynamic array of double values.
+     * @param length the length of the array.
+     */
+    Point(double *data, int length);
 
-    Point();
     /**
-     * @return the first value of the point.
+     * @param i, the index of the value.
+     * @return the value in the i-th place.
      **/
-    double getX1() const;
+    double get(int i) const;
     /**
-     * @return the second value of the point.
-     **/
-    double getX2() const;
+     * @return the number of double values.
+     */
+    int getLength() const;
+
     /**
-     * @return the third value of the point.
-     **/
-    double getX3() const;
-    /**
-     * @return the forth value of the point.
-     **/
-    double getX4() const;
-    Point& operator=(const Point& other);
+     * Overloading the << operator.
+     * @param os the output stream.
+     * @param a the point,
+     * @return the output stream with the addition of Point.
+     */
+    friend std::ostream& operator<<(std::ostream& os, const Point& a);
 };
+
 #endif //ADVANCEDPROGRAMMING_POINT_H
