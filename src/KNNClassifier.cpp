@@ -1,4 +1,4 @@
-#include "KNNclassifier.h"
+#include "KNNClassifier.hpp"
 //find the most popular type
 KNNClassifier::KNNClassifier(Flower** data, int size){
     length = size;

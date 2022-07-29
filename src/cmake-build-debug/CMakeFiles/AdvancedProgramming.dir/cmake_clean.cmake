@@ -5,7 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/EuclideanDistance.cpp.o"
   "CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/ManhattanDistance.cpp.o"
   "CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.o"
-  "CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o"
+  "CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.o"
   "CMakeFiles/AdvancedProgramming.dir/Point.cpp.o"
   "CMakeFiles/AdvancedProgramming.dir/main.cpp.o"
 )

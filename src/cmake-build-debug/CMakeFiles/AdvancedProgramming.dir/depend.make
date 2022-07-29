@@ -3,38 +3,38 @@
 
 CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/ChebyshevDistance.cpp.o: \
  ../DistanceCalcs/ChebyshevDistance.cpp \
- ../DistanceCalcs/ChebyshevDistance.h \
- ../DistanceCalcs/DistanceCalculator.h \
- ../Point.h
+ ../DistanceCalcs/ChebyshevDistance.hpp \
+ ../DistanceCalcs/DistanceCalculator.hpp \
+ ../Point.hpp
 CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/EuclideanDistance.cpp.o: \
- ../DistanceCalcs/DistanceCalculator.h \
+ ../DistanceCalcs/DistanceCalculator.hpp \
  ../DistanceCalcs/EuclideanDistance.cpp \
- ../DistanceCalcs/EuclideanDistance.h \
- ../Point.h
+ ../DistanceCalcs/EuclideanDistance.hpp \
+ ../Point.hpp
 CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/ManhattanDistance.cpp.o: \
- ../DistanceCalcs/DistanceCalculator.h \
+ ../DistanceCalcs/DistanceCalculator.hpp \
  ../DistanceCalcs/ManhattanDistance.cpp \
- ../DistanceCalcs/ManhattanDistance.h \
- ../Point.h
+ ../DistanceCalcs/ManhattanDistance.hpp \
+ ../Point.hpp
 CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.o: \
  ../Flowers/Flower.cpp \
- ../Flowers/Flower.h \
- ../Point.h
+ ../Flowers/Flower.hpp \
+ ../Point.hpp
 CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o: \
- ../DistanceCalcs/DistanceCalculator.h \
- ../Flowers/Flower.h \
+ ../DistanceCalcs/DistanceCalculator.hpp \
+ ../Flowers/Flower.hpp \
  ../KNNclassifier.cpp \
- ../KNNclassifier.h \
- ../Point.h
+ ../KNNclassifier.hpp \
+ ../Point.hpp
 CMakeFiles/AdvancedProgramming.dir/Point.cpp.o: \
  ../Point.cpp \
- ../Point.h
+ ../Point.hpp
 CMakeFiles/AdvancedProgramming.dir/main.cpp.o: \
- ../DistanceCalcs/ChebyshevDistance.h \
- ../DistanceCalcs/DistanceCalculator.h \
- ../DistanceCalcs/EuclideanDistance.h \
- ../DistanceCalcs/ManhattanDistance.h \
- ../Flowers/Flower.h \
- ../KNNclassifier.h \
- ../Point.h \
+ ../DistanceCalcs/ChebyshevDistance.hpp \
+ ../DistanceCalcs/DistanceCalculator.hpp \
+ ../DistanceCalcs/EuclideanDistance.hpp \
+ ../DistanceCalcs/ManhattanDistance.hpp \
+ ../Flowers/Flower.hpp \
+ ../KNNclassifier.hpp \
+ ../Point.hpp \
  ../main.cpp

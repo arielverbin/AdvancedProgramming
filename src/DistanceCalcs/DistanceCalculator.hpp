@@ -2,7 +2,7 @@
 #ifndef ADVANCEDPROGRAMMING_DISTANCECALCULATOR_H
 #define ADVANCEDPROGRAMMING_DISTANCECALCULATOR_H
 
-#include "../Point.h"
+#include "../Point.hpp"
 /**
  * A DistanceCalculator can calculate the distance between 2 Points, using an virtual formula.
  * It can also return the K-nearest points from a given point out of an array of data.

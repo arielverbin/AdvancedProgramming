@@ -1,14 +1,14 @@
-#include "Point.h"
+#include "Point.hpp"
 
 Point::Point(double* data, int length) : data(data), length(length){
 }
-Point::Point(const std::string& str, int numOfValues) : data(nullptr){
-    auto* values = new double[numOfValues];
+Point::Point(const std::string& str, int numOfValues) {
+    double* values = new double[numOfValues];
     int start = 0;
     int end = (int)str.find(',');
     int i = 0;
     while (end != -1) {
-        values[i]=std::stod(str.substr(start, end - start));
+        values[i]= std::stod(str.substr(start, end - start));
         i++;
         start = end + 1;
         end = (int)str.find(',', start);

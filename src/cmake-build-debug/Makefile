@@ -225,29 +225,29 @@ Flowers/Flower.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvancedProgramming.dir/build.make CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.s
 .PHONY : Flowers/Flower.cpp.s
 
-KNNclassifier.o: KNNclassifier.cpp.o
-.PHONY : KNNclassifier.o
+KNNClassifier.o: KNNClassifier.cpp.o
+.PHONY : KNNClassifier.o
 
 # target to build an object file
-KNNclassifier.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvancedProgramming.dir/build.make CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o
-.PHONY : KNNclassifier.cpp.o
+KNNClassifier.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvancedProgramming.dir/build.make CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.o
+.PHONY : KNNClassifier.cpp.o
 
-KNNclassifier.i: KNNclassifier.cpp.i
-.PHONY : KNNclassifier.i
+KNNClassifier.i: KNNClassifier.cpp.i
+.PHONY : KNNClassifier.i
 
 # target to preprocess a source file
-KNNclassifier.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvancedProgramming.dir/build.make CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.i
-.PHONY : KNNclassifier.cpp.i
+KNNClassifier.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvancedProgramming.dir/build.make CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.i
+.PHONY : KNNClassifier.cpp.i
 
-KNNclassifier.s: KNNclassifier.cpp.s
-.PHONY : KNNclassifier.s
+KNNClassifier.s: KNNClassifier.cpp.s
+.PHONY : KNNClassifier.s
 
 # target to generate assembly for a file
-KNNclassifier.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvancedProgramming.dir/build.make CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.s
-.PHONY : KNNclassifier.cpp.s
+KNNClassifier.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvancedProgramming.dir/build.make CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.s
+.PHONY : KNNClassifier.cpp.s
 
 Point.o: Point.cpp.o
 .PHONY : Point.o
@@ -318,9 +318,9 @@ help:
 	@echo "... Flowers/Flower.o"
 	@echo "... Flowers/Flower.i"
 	@echo "... Flowers/Flower.s"
-	@echo "... KNNclassifier.o"
-	@echo "... KNNclassifier.i"
-	@echo "... KNNclassifier.s"
+	@echo "... KNNClassifier.o"
+	@echo "... KNNClassifier.i"
+	@echo "... KNNClassifier.s"
 	@echo "... Point.o"
 	@echo "... Point.i"
 	@echo "... Point.s"

@@ -144,18 +144,18 @@ CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.cpp -o CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.s
 
-CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o: CMakeFiles/AdvancedProgramming.dir/flags.make
-CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o: ../KNNclassifier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o -c /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.cpp
+CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.o: CMakeFiles/AdvancedProgramming.dir/flags.make
+CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.o: ../KNNClassifier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.o -c /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.cpp
 
-CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.cpp > CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.i
+CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.cpp > CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.i
 
-CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.cpp -o CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.s
+CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.cpp -o CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.s
 
 # Object files for target AdvancedProgramming
 AdvancedProgramming_OBJECTS = \
@@ -165,7 +165,7 @@ AdvancedProgramming_OBJECTS = \
 "CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/ManhattanDistance.cpp.o" \
 "CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/ChebyshevDistance.cpp.o" \
 "CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.o" \
-"CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o"
+"CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.o"
 
 # External object files for target AdvancedProgramming
 AdvancedProgramming_EXTERNAL_OBJECTS =
@@ -176,7 +176,7 @@ AdvancedProgramming: CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/EuclideanD
 AdvancedProgramming: CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/ManhattanDistance.cpp.o
 AdvancedProgramming: CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/ChebyshevDistance.cpp.o
 AdvancedProgramming: CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.o
-AdvancedProgramming: CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o
+AdvancedProgramming: CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.o
 AdvancedProgramming: CMakeFiles/AdvancedProgramming.dir/build.make
 AdvancedProgramming: CMakeFiles/AdvancedProgramming.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable AdvancedProgramming"

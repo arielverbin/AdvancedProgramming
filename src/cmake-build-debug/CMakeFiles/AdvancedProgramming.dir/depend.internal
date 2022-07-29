@@ -3,38 +3,38 @@
 
 CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/ChebyshevDistance.cpp.o
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ChebyshevDistance.cpp
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ChebyshevDistance.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/DistanceCalculator.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.h
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ChebyshevDistance.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/DistanceCalculator.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
 CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/EuclideanDistance.cpp.o
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/DistanceCalculator.h
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/DistanceCalculator.hpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/EuclideanDistance.cpp
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/EuclideanDistance.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.h
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/EuclideanDistance.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
 CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/ManhattanDistance.cpp.o
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/DistanceCalculator.h
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/DistanceCalculator.hpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ManhattanDistance.cpp
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ManhattanDistance.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.h
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ManhattanDistance.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
 CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.o
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.cpp
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.h
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
 CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/DistanceCalculator.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.h
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/DistanceCalculator.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.hpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.cpp
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.h
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
 CMakeFiles/AdvancedProgramming.dir/Point.cpp.o
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.cpp
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.h
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
 CMakeFiles/AdvancedProgramming.dir/main.cpp.o
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ChebyshevDistance.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/DistanceCalculator.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/EuclideanDistance.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ManhattanDistance.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.h
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.h
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ChebyshevDistance.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/DistanceCalculator.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/EuclideanDistance.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ManhattanDistance.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/main.cpp

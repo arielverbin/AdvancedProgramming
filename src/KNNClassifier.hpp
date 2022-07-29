@@ -2,9 +2,9 @@
 #define ADVANCEDPROGRAMMING_KNNCLASSIFIER_H
 
 #include <string>
-#include "Flowers/Flower.h"
-#include "DistanceCalcs/DistanceCalculator.h"
-#include "DistanceCalcs/DistanceCalculator.h"
+#include "Flowers/Flower.hpp"
+#include "DistanceCalcs/DistanceCalculator.hpp"
+#include "DistanceCalcs/DistanceCalculator.hpp"
 
 class KNNClassifier {
     public:

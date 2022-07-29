@@ -12,7 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/EuclideanDistance.cpp" "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/EuclideanDistance.cpp.o"
   "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ManhattanDistance.cpp" "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles/AdvancedProgramming.dir/DistanceCalcs/ManhattanDistance.cpp.o"
   "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.cpp" "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.o"
-  "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.cpp" "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o"
+  "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.cpp" "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.o"
   "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.cpp" "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles/AdvancedProgramming.dir/Point.cpp.o"
   "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/main.cpp" "/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles/AdvancedProgramming.dir/main.cpp.o"
   )

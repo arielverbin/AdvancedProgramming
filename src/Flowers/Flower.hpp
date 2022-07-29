@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string> // for string class
-#include"../Point.h"
+#include"../Point.hpp"
 
 //A Flower - a Point + type
 class Flower {

@@ -1,12 +1,12 @@
 #include <iostream>
-#include "Point.h"
-#include "Flowers/Flower.h"
-#include "KNNclassifier.h"
-#include "DistanceCalcs/ManhattanDistance.h"
-#include "DistanceCalcs/EuclideanDistance.h"
-#include "DistanceCalcs/ChebyshevDistance.h"
+#include "Point.hpp"
+#include "Flowers/Flower.hpp"
+#include "KNNClassifier.hpp"
+#include "DistanceCalcs/ManhattanDistance.hpp"
+#include "DistanceCalcs/EuclideanDistance.hpp"
+#include "DistanceCalcs/ChebyshevDistance.hpp"
 #include <fstream>
-#include<list>
+#include<vector>
 
 using namespace std;
 /**
@@ -14,27 +14,12 @@ using namespace std;
  * @param l the list.
  * @return  the new array.
  */
-void** listToArray(const list<void*>& l) {
+void** listToArray(const vector<void*>& l) {
     void** newArr = new void*[l.size()];
-    int i = 0;
-    for(void* v : l) {
-        newArr[i++] = v;
+    for(int i = 0;i <l.size(); i ++) {
+        newArr[i] = l[i];
     }
     return newArr;
-}
-/**
- * opens a file.
- * @param fileName the path.
- * @return the ifstream.
- */
-ifstream openFile(const std::string& fileName) {
-    ifstream input;
-    input.open(fileName);
-    if (input.fail()) {
-        cout << "Could not open " << fileName << endl;
-        exit(1);
-    }
-    return input;
 }
 /**
  * Creates a new array with the flowers from the given file.
@@ -43,9 +28,15 @@ ifstream openFile(const std::string& fileName) {
  * @return the array.
  */
 Flower** getDataFromFile(const std::string &fileName, int *length) {
-    list<void *> l;
+    vector<void *> l;
     string line;
-    ifstream input = openFile(fileName);
+    ifstream input;
+    input.open(fileName.c_str());
+    if (input.fail()) {
+        cout << "Could not open " << fileName << endl;
+        input.close();
+        throw std::exception();
+    }
     while (!input.eof()) {
         getline(input, line);
         if(std::equal(line.begin(), line.end(), "")) continue; // avoid an empty line.
@@ -61,9 +52,15 @@ Flower** getDataFromFile(const std::string &fileName, int *length) {
  * @return the array.
  */
 Point** getPointsFromFile(const std::string& fileName, int *length){
-    list<void *> l;
+    vector<void *> l;
     string line;
-    ifstream input = openFile(fileName);
+    ifstream input;
+    input.open(fileName.c_str());
+    if (input.fail()) {
+        cout << "Could not open " << fileName << endl;
+        input.close();
+        throw std::exception();
+    }
     while (!input.eof()) {
         getline(input, line);
         if(std::equal(line.begin(), line.end(), "")) continue; // avoid an empty line.
@@ -80,7 +77,7 @@ Point** getPointsFromFile(const std::string& fileName, int *length){
  */
 void copyToFile(const std::string& fileName, Flower** flowers, int length) {
     ofstream output;
-    output.open (fileName);
+    output.open(fileName.c_str());
     for(int i = 0; i < length; i ++) {
         output << flowers[i]->getType() << endl;
     }
@@ -97,7 +94,7 @@ void copyToFile(const std::string& fileName, Flower** flowers, int length) {
  */
 Flower** classifyAll(DistanceCalculator *dc, KNNClassifier knn,
                      Point** unclassifiedPoints, int lengthOfPoints, int k) {
-    auto** classifiedPoints = new Flower*[lengthOfPoints]; //to be filled with the classified points.
+    Flower** classifiedPoints = new Flower*[lengthOfPoints]; //to be filled with the classified points.
     for(int i = 0; i < lengthOfPoints; i ++) {
         Point curPoint = *unclassifiedPoints[i]; //take the current point.
         classifiedPoints[i] = new Flower(curPoint, //classify it and create a new flower.
@@ -121,7 +118,7 @@ int main() {
 
 //EuclideanDistance
 
-    auto** classifiedPoints = classifyAll(new EuclideanDistance(),
+    Flower** classifiedPoints = classifyAll(new EuclideanDistance(),
                                           knnClassifier, unclassifiedPoints, lengthOfPoints, k);
     copyToFile("Output/euclidean_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file.
 

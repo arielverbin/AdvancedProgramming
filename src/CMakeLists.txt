@@ -4,4 +4,4 @@ project(AdvancedProgramming)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(AdvancedProgramming
-        main.cpp Point.cpp Point.h DistanceCalcs/DistanceCalculator.h DistanceCalcs/EuclideanDistance.cpp DistanceCalcs/EuclideanDistance.h DistanceCalcs/ManhattanDistance.cpp DistanceCalcs/ManhattanDistance.h DistanceCalcs/ChebyshevDistance.cpp DistanceCalcs/ChebyshevDistance.h Flowers/Flower.cpp Flowers/Flower.h KNNclassifier.cpp KNNclassifier.h)
+        main.cpp Point.cpp Point.hpp DistanceCalcs/DistanceCalculator.hpp DistanceCalcs/EuclideanDistance.cpp DistanceCalcs/EuclideanDistance.hpp DistanceCalcs/ManhattanDistance.cpp DistanceCalcs/ManhattanDistance.hpp DistanceCalcs/ChebyshevDistance.cpp DistanceCalcs/ChebyshevDistance.hpp Flowers/Flower.cpp Flowers/Flower.hpp KNNClassifier.cpp KNNClassifier.hpp)

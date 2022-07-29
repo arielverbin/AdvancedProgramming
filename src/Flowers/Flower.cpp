@@ -1,4 +1,4 @@
-#include "Flower.h"
+#include "Flower.hpp"
 #include <utility>
 #include <iostream>
 #include <string>
@@ -8,7 +8,7 @@ Flower::Flower(Point point1, std::string name) :
                     point(point1), type(std::move(name)) { }
 
 Flower::Flower(const std::string &str, int numOfValues) : point(nullptr, 0){
-    auto* values = new double[numOfValues];
+    double* values = new double[numOfValues];
     int start = 0;
     int end = (int)str.find(',');
     int i = 0;
