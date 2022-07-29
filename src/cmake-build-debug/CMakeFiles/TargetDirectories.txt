@@ -1,0 +1,3 @@
+/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/arielverbin/CLionProjects/AdvancedProgramming/src/cmake-build-debug/CMakeFiles/AdvancedProgramming.dir

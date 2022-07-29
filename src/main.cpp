@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Point.h"
 #include "Flowers/Flower.h"
-#include "KNNClassifier.h"
+#include "KNNclassifier.h"
 #include "DistanceCalcs/ManhattanDistance.h"
 #include "DistanceCalcs/EuclideanDistance.h"
 #include "DistanceCalcs/ChebyshevDistance.h"
@@ -114,8 +114,8 @@ int main() {
     //length of classified flowers, length of unclassified points.
     int lengthOfData, lengthOfPoints;
 
-    Flower **flowers = getDataFromFile("classified.csv", &lengthOfData); //fill "flowers" with classifieds.
-    Point **unclassifiedPoints = getPointsFromFile("unclassified.csv", &lengthOfPoints);
+    Flower **flowers = getDataFromFile("Input/classified.csv", &lengthOfData); //fill "flowers" with classifieds.
+    Point **unclassifiedPoints = getPointsFromFile("Input/unclassified.csv", &lengthOfPoints);
 
     KNNClassifier knnClassifier = KNNClassifier(flowers, lengthOfData); //new KNNClassifier.
 
@@ -123,19 +123,19 @@ int main() {
 
     auto** classifiedPoints = classifyAll(new EuclideanDistance(),
                                           knnClassifier, unclassifiedPoints, lengthOfPoints, k);
-    copyToFile("euclidean_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file.
+    copyToFile("Output/euclidean_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file.
 
 //ManhattanDistance
 
     classifiedPoints = classifyAll(new ManhattanDistance(),
                                           knnClassifier, unclassifiedPoints, lengthOfPoints, k);
-    copyToFile("manhattan_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file
+    copyToFile("Output/manhattan_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file
 
 //ChebyshevDistance
 
     classifiedPoints = classifyAll(new ChebyshevDistance(),
                                    knnClassifier, unclassifiedPoints, lengthOfPoints, k);
-    copyToFile("chebyshev_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file.
+    copyToFile("Output/chebyshev_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file.
 
 }
 
