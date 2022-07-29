@@ -30,7 +30,7 @@ string
 ../Point.hpp
 /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
 
-/Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.hpp
+/Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.hpp
 string
 -
 Flowers/Flower.hpp
@@ -51,8 +51,8 @@ Point.hpp
 /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
 Flowers/Flower.hpp
 /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.hpp
-KNNclassifier.hpp
-/Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.hpp
+KNNClassifier.hpp
+/Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.hpp
 DistanceCalcs/ManhattanDistance.hpp
 /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ManhattanDistance.hpp
 DistanceCalcs/EuclideanDistance.hpp

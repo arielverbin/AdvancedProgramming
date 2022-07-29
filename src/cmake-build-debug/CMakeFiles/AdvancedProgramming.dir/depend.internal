@@ -20,11 +20,11 @@ CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.o
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.cpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.hpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
-CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o
+CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.o
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/DistanceCalculator.hpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.hpp
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.cpp
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.cpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.hpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
 CMakeFiles/AdvancedProgramming.dir/Point.cpp.o
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.cpp
@@ -35,6 +35,6 @@ CMakeFiles/AdvancedProgramming.dir/main.cpp.o
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/EuclideanDistance.hpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/DistanceCalcs/ManhattanDistance.hpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Flowers/Flower.hpp
- /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNclassifier.hpp
+ /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.hpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
  /Users/arielverbin/CLionProjects/AdvancedProgramming/src/main.cpp

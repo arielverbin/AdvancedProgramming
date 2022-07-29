@@ -20,11 +20,11 @@ CMakeFiles/AdvancedProgramming.dir/Flowers/Flower.cpp.o: \
  ../Flowers/Flower.cpp \
  ../Flowers/Flower.hpp \
  ../Point.hpp
-CMakeFiles/AdvancedProgramming.dir/KNNclassifier.cpp.o: \
+CMakeFiles/AdvancedProgramming.dir/KNNClassifier.cpp.o: \
  ../DistanceCalcs/DistanceCalculator.hpp \
  ../Flowers/Flower.hpp \
- ../KNNclassifier.cpp \
- ../KNNclassifier.hpp \
+ ../KNNClassifier.cpp \
+ ../KNNClassifier.hpp \
  ../Point.hpp
 CMakeFiles/AdvancedProgramming.dir/Point.cpp.o: \
  ../Point.cpp \
@@ -35,6 +35,6 @@ CMakeFiles/AdvancedProgramming.dir/main.cpp.o: \
  ../DistanceCalcs/EuclideanDistance.hpp \
  ../DistanceCalcs/ManhattanDistance.hpp \
  ../Flowers/Flower.hpp \
- ../KNNclassifier.hpp \
+ ../KNNClassifier.hpp \
  ../Point.hpp \
  ../main.cpp

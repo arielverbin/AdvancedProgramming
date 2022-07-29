@@ -107,12 +107,12 @@ Flower** classifyAll(DistanceCalculator *dc, KNNClassifier knn,
  * ?!?!#??
  */
 int main() {
-    int k = 11;
+    int k = 3;
     //length of classified flowers, length of unclassified points.
     int lengthOfData, lengthOfPoints;
 
-    Flower **flowers = getDataFromFile("Input/classified.csv", &lengthOfData); //fill "flowers" with classifieds.
-    Point **unclassifiedPoints = getPointsFromFile("Input/unclassified.csv", &lengthOfPoints);
+    Flower **flowers = getDataFromFile("src/Input/classified.csv", &lengthOfData); //fill "flowers" with classifieds.
+    Point **unclassifiedPoints = getPointsFromFile("src/Input/unclassified.csv", &lengthOfPoints);
 
     KNNClassifier knnClassifier = KNNClassifier(flowers, lengthOfData); //new KNNClassifier.
 
@@ -120,19 +120,19 @@ int main() {
 
     Flower** classifiedPoints = classifyAll(new EuclideanDistance(),
                                           knnClassifier, unclassifiedPoints, lengthOfPoints, k);
-    copyToFile("Output/euclidean_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file.
+    copyToFile("src/Output/euclidean_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file.
 
 //ManhattanDistance
 
     classifiedPoints = classifyAll(new ManhattanDistance(),
                                           knnClassifier, unclassifiedPoints, lengthOfPoints, k);
-    copyToFile("Output/manhattan_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file
+    copyToFile("src/Output/manhattan_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file
 
 //ChebyshevDistance
 
     classifiedPoints = classifyAll(new ChebyshevDistance(),
                                    knnClassifier, unclassifiedPoints, lengthOfPoints, k);
-    copyToFile("Output/chebyshev_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file.
+    copyToFile("src/Output/chebyshev_output.csv", classifiedPoints, lengthOfPoints); //copy the flowers to the file.
 
 }
 
