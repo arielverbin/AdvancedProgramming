@@ -19,15 +19,14 @@ class KNNClassifier {
         std::string classify(const Point& point, int k, DistanceCalculator& dc);
         /**
          * Constructor.
-         * @param flowers the array of data.
-         * @param length its length.
+         * @param flowers the vector of the data.
          */
         KNNClassifier(std::vector<Flower> &data);
 
     private:
     std::vector<Flower> flowers; //the data.
         /**
-         * @brief get a array of flowers and find the most popular type
+         * @brief get a vector of flowers and find the most popular type
          *
          * @param data
          * @param length

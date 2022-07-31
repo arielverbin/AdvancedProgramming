@@ -32,7 +32,7 @@ std::string KNNClassifier::findMajorityType(std::vector<Flower> &flowers, int le
         return "Iris-virginica";
 }
 
-//get the majority type
+//get the most popular type
 std::string KNNClassifier::classify(const Point& point, int k, DistanceCalculator& dc){
 
     //sort the distances' array ----bubble-sort---- efficiency doesn't important

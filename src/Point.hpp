@@ -9,13 +9,17 @@ class Point {
     private:
         std::vector<double> data;
     public:
-    /**
-     * Constructor.
-     * @param data a dynamic array of double values.
-     * @param length the length of the array.
-     */
+  /**
+   * @brief Construct a new Point object
+   * 
+   * @param d 
+   */
     Point(std::vector<double> d);
-
+    /**
+     * @brief Construct a new Point object
+     * 
+     * @param str 
+     */
     Point(const std::string& str);
 
     /**

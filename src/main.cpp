@@ -11,10 +11,10 @@
 using namespace std;
 
 /**
- * Creates a new array with the flowers from the given file.
+ * @brief Get the Data From File object - Creates a new vector with 
+ * the flowers from the given file.
  * @param fileName the given file.
- * @param length pointer to int, used to store the number of flowers in the file.
- * @return the array.
+ * @return vector<Flower> 
  */
 vector<Flower> getDataFromFile(const std::string &fileName) {
     vector<Flower> l;
@@ -35,10 +35,9 @@ vector<Flower> getDataFromFile(const std::string &fileName) {
 }
 
 /**
- * Creates a new array with the points (unclassified flowers) from the given file.
+ * Creates a new vector with the points (unclassified flowers) from the given file.
  * @param fileName the given file.
- * @param length pointer to int, used to store the number of points in the file.
- * @return the array.
+ * @return the vector.
  */
 vector<Point> getPointsFromFile(const std::string &fileName) {
     vector<Point> l;
@@ -62,7 +61,6 @@ vector<Point> getPointsFromFile(const std::string &fileName) {
  * Copy the classified points to a given file.
  * @param fileName the file.
  * @param flowers the classified points (as flowers)
- * @param length the length of the flowers array.
  */
 void copyToFile(const std::string &fileName, vector<Flower> flowers) {
     ofstream output;
@@ -78,9 +76,8 @@ void copyToFile(const std::string &fileName, vector<Flower> flowers) {
  * @param dc the distance calculator.
  * @param knn the classifier.
  * @param unclassifiedPoints the points to be classified.
- * @param lengthOfPoints the number of points to be classified.
  * @param k the constant k from the algorithm.
- * @return new array of classified points (as flowers).
+ * @return new vector of classified points (as flowers).
  */
 vector<Flower> classifyAll(DistanceCalculator &dc, KNNClassifier &knn,
                            vector<Point> &unclassifiedPoints, int k) {
@@ -95,7 +92,7 @@ vector<Flower> classifyAll(DistanceCalculator &dc, KNNClassifier &knn,
 }
 
 /**
- * ?!?!#??
+ * main.
  */
 int main(int argc, char** argv) {
     int k = stoi(argv[1]);
