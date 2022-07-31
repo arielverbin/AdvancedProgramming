@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cmath>
 #include "ChebyshevDistance.hpp"
-double ChebyshevDistance::calculate(Point p1, Point p2) {
+double ChebyshevDistance::calculate(const Point &p1, const Point &p2) {
     if(p1.getLength() != p2.getLength()) {
         std::cout << "The two points must have the same size."<< std::endl;
         return -1;

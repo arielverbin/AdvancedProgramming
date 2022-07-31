@@ -17,13 +17,13 @@ class Flower {
      * @param point set of values.
      * @param type of the flower.
      */
-    Flower(Point point, std::string type);
+    Flower(Point &point, std::string type);
     /**
      * Constructor using a string representation.
      * @param str in form : "value,value,value,...,value,type".
      * @param numOfValues the number of values for the point.
      */
-    Flower(const std::string &str, int numOfValues);
+    Flower(const std::string &str);
     /**
      * @brief Get the Point object
      * 

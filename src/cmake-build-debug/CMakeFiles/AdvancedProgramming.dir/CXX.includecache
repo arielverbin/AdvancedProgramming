@@ -30,6 +30,10 @@ string
 ../Point.hpp
 /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
 
+/Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.cpp
+KNNClassifier.hpp
+/Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.hpp
+
 /Users/arielverbin/CLionProjects/AdvancedProgramming/src/KNNClassifier.hpp
 string
 -
@@ -42,6 +46,8 @@ DistanceCalcs/DistanceCalculator.hpp
 
 /Users/arielverbin/CLionProjects/AdvancedProgramming/src/Point.hpp
 iostream
+-
+vector
 -
 
 /Users/arielverbin/CLionProjects/AdvancedProgramming/src/main.cpp

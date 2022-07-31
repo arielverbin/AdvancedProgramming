@@ -9,7 +9,7 @@
  **/
 class EuclideanDistance : public DistanceCalculator {
 public:
-    double calculate(Point p1, Point p2) override;
+    double calculate(const Point &p1, const Point &p2) override;
 };
 
 

@@ -2,21 +2,21 @@
 #define ADVANCEDPROGRAMMING_POINT_H
 
 #include <iostream>
+#include <vector>
 
 //A four-dimensional point.
 class Point {
     private:
-        double* data;
-        int length;
+        std::vector<double> data;
     public:
     /**
      * Constructor.
      * @param data a dynamic array of double values.
      * @param length the length of the array.
      */
-    Point(double *data, int length);
+    Point(std::vector<double> d);
 
-    Point(const std::string& str, int numOfValues);
+    Point(const std::string& str);
 
     /**
      * @param i, the index of the value.
