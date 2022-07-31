@@ -97,8 +97,8 @@ vector<Flower> classifyAll(DistanceCalculator &dc, KNNClassifier &knn,
 /**
  * ?!?!#??
  */
-int main() {
-    int k = 3;
+int main(int argc, char** argv) {
+    int k = stoi(argv[1]);
 
     vector<Flower> flowers = getDataFromFile("Input/classified.csv"); //fill "flowers" with classifieds.
     vector<Point> unclassifiedPoints = getPointsFromFile("Input/unclassified.csv");

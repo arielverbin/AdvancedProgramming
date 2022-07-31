@@ -1,0 +1,7 @@
+.vscode/launch.json
+.vscode/tasks.json
+
+src/Output/chebyshev_output.csv
+src/Output/euclidean_output.csv
+src/Output/manhattan_output.csv
+src/a.out
