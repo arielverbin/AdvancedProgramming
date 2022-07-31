@@ -101,9 +101,9 @@ int main(int argc, char** argv) {
     vector<Point> unclassifiedPoints = getPointsFromFile("Input/unclassified.csv");
 
     KNNClassifier knnClassifier = KNNClassifier(flowers); //new KNNClassifier.
-    EuclideanDistance *euclideanDistance = new EuclideanDistance();
-    ChebyshevDistance *chebyshevDistance = new ChebyshevDistance();
-    ManhattanDistance *manhattanDistance = new ManhattanDistance();
+    auto *euclideanDistance = new EuclideanDistance();
+    auto *chebyshevDistance = new ChebyshevDistance();
+    auto *manhattanDistance = new ManhattanDistance();
 
 //EuclideanDistance
 

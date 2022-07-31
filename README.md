@@ -1,8 +1,16 @@
 # AdvancedProgramming
-An explanation about our program:
+####An explanation about our program:
 
-First we define a point which has a vector named 'data'.
-Then we define a Flower - a point and a type (string).
-At the same time we wrote 3 classes - one for each distance formula.
-We used the abstruct class "DistanceCalculator" in order to get encapsulation - the 3 classes above extend from the abstruct class.
-We wrote the KNNclassifier class - which help us to do the KNN algorithm - it gets a vector of Flowers, k and a flower and return the flower's type according to the KNN algorithm.
+First, we defined a class called *Point* that stores a vector of 'double' values.
+Then we defined a *Flower*, which stores a 'Point' and a String. The point represents the flower's measurements, and the string represents the flower's type.
+
+At the same time, we wrote three classes - one for each distance formula.
+We used the abstract class called *DistanceCalculator* to avoid code duplications.
+We also implemented the *KNNClassifier* class with a single method - 'classify.' Its purpose is to perform the KNN algorithm.
+The role of the main class is to open the input files and calculate and save the algorithm's results on the output files.
+
+The input files are located in the folder **src/Input,** and the output files are created (or overwritten) in the folder **src/Output.**
+###Instructions to run:
+1. Run the command `g++ *.cpp DistanceCalcs/*.cpp Flowers/*.cpp -std=c++11`, inside the **src** folder, using Terminal.
+2. A file named *a.out* should appear. Run the command `./a.out k` to run the program, and replace `k` with some Integer (for exmaple: `./a.out 5`).
+3. The three output files should appear inside **src/Output** folder.
