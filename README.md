@@ -15,6 +15,8 @@ In order to determine which measurement is closer to which, we implemented three
 We used the abstract class called *DistanceCalculator* to avoid code duplications.
 
 We also implemented the *KNNClassifier* class with a single method - 'classify.' Its purpose is to perform the KNN algorithm.
+The method gets an unclassified measurement, and sorts the classified irises from the closest one to the furthest, according to their measurements and the given distance calculator. Then, the method looks for the most common type among the first *k* irises. It creates a new Flower with the iris type found, and returns it.
+
 The role of the main class is to open the input files and calculate and save the algorithm's results on the output files.
 
 The input files are located in the folder **src/Input,** and the output files are created (or overwritten) in the folder **src/Output.**
