@@ -7,7 +7,25 @@
 #include "DistanceCalcs/DistanceCalculator.hpp"
 
 class KNNClassifier {
+
+    private:
+    std::vector<Flower> flowers; //the data.
+        /**
+         * @brief get a vector of flowers and find the most popular type
+         *
+         * @param data
+         * @return std::string
+         */
+        static std::string findMajorityType(std::vector<Flower> &flowers);
+
     public:
+
+       /**
+         * Constructor.
+         * @param flowers the vector of the data.
+         */
+        KNNClassifier(std::vector<Flower> &data);
+
         /**
          * @brief Get the Knn object - using "findMajorityType" function
          *
@@ -17,22 +35,7 @@ class KNNClassifier {
          * @return std::string
          */
         std::string classify(const Point& point, int k, DistanceCalculator& dc);
-        /**
-         * Constructor.
-         * @param flowers the vector of the data.
-         */
-        KNNClassifier(std::vector<Flower> &data);
-
-    private:
-    std::vector<Flower> flowers; //the data.
-        /**
-         * @brief get a vector of flowers and find the most popular type
-         *
-         * @param data
-         * @param length
-         * @return std::string
-         */
-        static std::string findMajorityType(std::vector<Flower> &flowers, int length);
+     
     };
 
 

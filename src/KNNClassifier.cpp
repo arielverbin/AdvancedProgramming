@@ -3,9 +3,9 @@
 KNNClassifier::KNNClassifier(std::vector<Flower> &data) : flowers(data){
 }
 
-std::string KNNClassifier::findMajorityType(std::vector<Flower> &flowers, int length){
+std::string KNNClassifier::findMajorityType(std::vector<Flower> &flowers){
     int array[3] = {0,0,0};
-    for (int i = 0; i < length; i++){
+    for (int i = 0; i < flowers.size(); i++){
         if (flowers[i].getType()=="Iris-setosa"){
             array[0]++;
         }
@@ -52,8 +52,10 @@ std::string KNNClassifier::classify(const Point& point, int k, DistanceCalculato
         }
     }
 
+    flowers.resize(k);
+
     //now we have an array of the flowers sort by their distance from our point.
     //we need now to find the most popular type
-    return findMajorityType(flowers,k);
+    return findMajorityType(flowers);
 
 }
