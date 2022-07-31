@@ -1,28 +1,29 @@
 #include "Point.hpp"
 
-Point::Point(double* data, int length) : data(data), length(length){
+#include <utility>
+
+Point::Point(std::vector<double> d) : data(std::move(d)){
 }
-Point::Point(const std::string& str, int numOfValues) {
-    double* values = new double[numOfValues];
+Point::Point(const std::string& str) {
+    std::vector<double> values;
     int start = 0;
     int end = (int)str.find(',');
     int i = 0;
     while (end != -1) {
-        values[i]= std::stod(str.substr(start, end - start));
+        values.emplace_back(std::stod(str.substr(start, end - start)));
         i++;
         start = end + 1;
         end = (int)str.find(',', start);
     }
-    values[i] = std::stod(str.substr(start, end - start));
+    values.emplace_back(std::stod(str.substr(start, end - start)));
     data = values;
-    length = numOfValues;
 }
 double Point::get(int i) const {
     return data[i];
 }
 
 int Point::getLength() const {
-    return length;
+    return (int)data.size();
 }
 std::ostream& operator<<(std::ostream& os, const Point& a){
     os<<"(";

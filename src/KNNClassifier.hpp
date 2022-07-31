@@ -16,17 +16,16 @@ class KNNClassifier {
          * @param dc
          * @return std::string
          */
-        std::string classify(Point point, int k, DistanceCalculator& dc);
+        std::string classify(const Point& point, int k, DistanceCalculator& dc);
         /**
          * Constructor.
          * @param flowers the array of data.
          * @param length its length.
          */
-        KNNClassifier(Flower** flowers, int length);
+        KNNClassifier(std::vector<Flower> &data);
 
     private:
-    Flower** flowers; //the data.
-    int length; //its length
+    std::vector<Flower> flowers; //the data.
         /**
          * @brief get a array of flowers and find the most popular type
          *
@@ -34,7 +33,7 @@ class KNNClassifier {
          * @param length
          * @return std::string
          */
-        static std::string findMajorityType(Flower** data, int length);
+        static std::string findMajorityType(std::vector<Flower> &flowers, int length);
     };
 
 

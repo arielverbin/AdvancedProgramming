@@ -1,17 +1,15 @@
 #include "KNNClassifier.hpp"
 //find the most popular type
-KNNClassifier::KNNClassifier(Flower** data, int size){
-    length = size;
-    flowers = data;
+KNNClassifier::KNNClassifier(std::vector<Flower> &data) : flowers(data){
 }
 
-std::string KNNClassifier::findMajorityType(Flower** flowers, int length){
+std::string KNNClassifier::findMajorityType(std::vector<Flower> &flowers, int length){
     int array[3] = {0,0,0};
     for (int i = 0; i < length; i++){
-        if (flowers[i]->getType()=="Iris-setosa"){
+        if (flowers[i].getType()=="Iris-setosa"){
             array[0]++;
         }
-        else if (flowers[i]->getType()=="Iris-versicolor"){
+        else if (flowers[i].getType()=="Iris-versicolor"){
             array[1]++;
         }
         else{
@@ -35,19 +33,21 @@ std::string KNNClassifier::findMajorityType(Flower** flowers, int length){
 }
 
 //get the majority type
-std::string KNNClassifier::classify(Point point, int k, DistanceCalculator& dc){
+std::string KNNClassifier::classify(const Point& point, int k, DistanceCalculator& dc){
 
     //sort the distances' array ----bubble-sort---- efficiency doesn't important
-    for (int j = 0; j < length - 1; j++){
+    for (int j = 0; j < flowers.size() - 1; j++){
 
         // Last i elements are already 
         // in place
-        for (int l = 0; l < length - j - 1; l++){
-            if (dc.calculate(point, flowers[l]->getPoint()) >
-                        dc.calculate(point, flowers[l+1]->getPoint())){
-                Flower* temp = flowers[l];
+        for (int l = 0; l < flowers.size() - j - 1; l++){
+            if (dc.calculate(point, flowers[l].getPoint()) >
+                        dc.calculate(point, flowers[l+1].getPoint())){
+
+                Flower temp = flowers[l];
                 flowers[l] = flowers[l+1];
                 flowers[l+1] = temp;
+
             }
         }
     }
