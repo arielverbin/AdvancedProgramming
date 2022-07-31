@@ -51,11 +51,14 @@ std::string KNNClassifier::classify(const Point& point, int k, DistanceCalculato
             }
         }
     }
-
-    flowers.resize(k);
+    std::vector<Flower> vec;
+    for (int i = 0; i < k; i++){
+        vec.push_back(flowers[i]);
+    }
+    
 
     //now we have an array of the flowers sort by their distance from our point.
     //we need now to find the most popular type
-    return findMajorityType(flowers);
+    return findMajorityType(vec);
 
 }
