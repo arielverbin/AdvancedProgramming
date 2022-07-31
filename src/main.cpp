@@ -20,7 +20,7 @@ vector<Flower> getDataFromFile(const std::string &fileName) {
     vector<Flower> l;
     string line;
     ifstream input;
-    input.open(fileName.c_str());
+    input.open(fileName);
     if (input.fail()) {
         cout << "Could not open " << fileName << endl;
         input.close();
@@ -31,6 +31,7 @@ vector<Flower> getDataFromFile(const std::string &fileName) {
         if (std::equal(line.begin(), line.end(), "")) continue; // avoid an empty line.
         l.emplace_back(Flower(line));
     }
+    input.close();
     return l;
 }
 
@@ -43,7 +44,7 @@ vector<Point> getPointsFromFile(const std::string &fileName) {
     vector<Point> l;
     string line;
     ifstream input;
-    input.open(fileName.c_str());
+    input.open(fileName);
     if (input.fail()) {
         cout << "Could not open " << fileName << endl;
         input.close();
@@ -54,6 +55,7 @@ vector<Point> getPointsFromFile(const std::string &fileName) {
         if (std::equal(line.begin(), line.end(), "")) continue; // avoid an empty line.
         l.emplace_back(Point(line));
     }
+    input.close();
     return l;
 }
 
@@ -64,7 +66,7 @@ vector<Point> getPointsFromFile(const std::string &fileName) {
  */
 void copyToFile(const std::string &fileName, vector<Flower> flowers) {
     ofstream output;
-    output.open(fileName.c_str());
+    output.open(fileName);
     for (auto &flower: flowers) {
         output << flower.getType() << endl;
     }
