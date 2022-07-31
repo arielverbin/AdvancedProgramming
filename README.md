@@ -8,7 +8,7 @@ Then we defined a *Flower*, which stores a 'Point' and a String. The point repre
 At the same time, we wrote three classes - one for each distance formula.
 We used the abstract class called *DistanceCalculator* to avoid code duplications.
 We also implemented the *KNNClassifier* class with a single method - 'classify.' Its purpose is to perform the KNN algorithm.
-The role of the main class is to open the input files and calculate and save the algorithm's results on the output files.
+The role of the main class is to open the input files, calculate and save the algorithm's results on the output files.
 
 The input files are located in the folder **src/Input,** and the output files are created (or overwritten) in the folder **src/Output.**
 
