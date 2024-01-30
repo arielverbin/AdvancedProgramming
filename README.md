@@ -1,12 +1,12 @@
 # K Nearest Neighbors
 
-###**The Algorithm:**
+## The Algorithm
 
 We would like to classify an object to a certain membership (in our case - an Iris type) based on the most common class among its *k* nearest neighbors. If k=1, for example, the object is simply assigned to the class of its nearest neighbor.
 
 We are given three classes via an Input file - *classified.csv*. The three classes are three types of iris flowers, and each flower is described as four measurements. Using this data, we will classify any measurement from the *unclassified.csv* file into the most common Iris-type among its *k* closest neighbors. In this way, we can estimate the type to which the measurement belongs.
 
-###**Our Implementation:**
+## Our Implementation
 
 First, we created a class named *Point*, its purpose is to store the four measurements of each Iris.
 Then we defined a *Flower*, which holds a 'Point' and a String. The point represents the flower's measurements, and the string represents the flower's type.
@@ -21,7 +21,7 @@ The role of the main class is to open the input files and calculate and save the
 
 The input files are located in the folder **src/Input,** and the output files are created (or overwritten) in the folder **src/Output.**
 
-###**Instructions to run:**
+## Instructions to run
 1. Download the project and save it on your local device.
 2. Open Terminal, and navigate to the project using `cd path/to/your/program` command. Then, enter into the **src** folder, inside the project (using `cd src`).
 4. Run the command `g++ *.cpp DistanceCalcs/*.cpp Flowers/*.cpp -std=c++11` on your Terminal.
